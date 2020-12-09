@@ -946,6 +946,9 @@ function getSectionDefaultElement(sectionId) {
 }
 
 function getSectionLastFocusedElement(sectionId) {
+  if (!_sections[sectionId]) {
+    return null;
+  }
   var lastFocusedElement = _sections[sectionId].lastFocusedElement;
   if (!isNavigable(lastFocusedElement, sectionId, true)) {
     return null;
@@ -1939,13 +1942,6 @@ var FocusableSection = function (_Component3) {
         enterTo: enterTo,
         defaultElement: defaultElement
       });
-    }
-  }, {
-    key: 'componentDidUpdate',
-    value: function componentDidUpdate() {
-      if (!_spatial_navigation2.default.enable(this.sectionId)) {
-        this.componentDidMount();
-      }
     }
   }, {
     key: 'render',
