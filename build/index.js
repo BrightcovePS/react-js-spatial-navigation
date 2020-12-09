@@ -1941,6 +1941,13 @@ var FocusableSection = function (_Component3) {
       });
     }
   }, {
+    key: 'componentDidUpdate',
+    value: function componentDidUpdate() {
+      if (!_spatial_navigation2.default.enable(this.sectionId)) {
+        this.componentDidMount();
+      }
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(

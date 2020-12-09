@@ -253,6 +253,12 @@ class FocusableSection extends Component {
     });
   }
 
+  componentDidUpdate() {
+    if(!JsSpatialNavigation.enable(this.sectionId)) {
+      this.componentDidMount();
+    }
+  }
+
   render() {
     return (
       <div>
