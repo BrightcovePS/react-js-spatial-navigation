@@ -11,10 +11,10 @@
     "url": "git+https://github.com/dead/react-js-spatial-navigation.git"
   },
   "peerDependencies": {
-    "react": "^15.5.4"
+    "react": "^16.7.0"
   },
   "dependencies": {
-    "react": "^15.5.4",
+    "react": "^16.7.0",
     "webpack": "^2.6.1"
   },
   "scripts": {
